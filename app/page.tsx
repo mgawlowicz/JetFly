@@ -3,6 +3,7 @@ import Nav from '../components/Nav/navbar'
 import Experience from '../components/Experience/experience'
 import Baner from '../components/Baner/baner'
 import Fleet from '../components/Fleet/fleet'
+import Map from '../components/Map/map'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Baner />
       <Experience />
       <Fleet />
+      <Map />
     </main>
   );
 }

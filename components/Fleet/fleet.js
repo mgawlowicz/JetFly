@@ -11,7 +11,7 @@ export default function Fleet(){
             </div>
             <div className="flex flex-col">
                 <div className="relative w-full h-72 lg:h-96 font-bold">
-                    <Image src={'/g550.webp'} fill="true" style={{objectFit: "cover"}}/>
+                    <Image src={'/g550.webp'} fill="true" style={{objectFit: "cover"}} loading="lazy" alt="g550"/>
                     <div className="absolute w-full h-full flex flex-col justify-between px-12 py-12 lg:px-36 lg:py-12">
                         <h4 className="lg:text-2xl">Gulfstream</h4>
                         <h1 className="text-5xl lg:text-8xl">G550</h1>
@@ -27,7 +27,7 @@ export default function Fleet(){
                     </div>
                 </div>
                 <div className="relative w-full h-72 lg:h-96 font-bold">
-                    <Image src={'/g600.webp'} fill="true" style={{objectFit: "cover"}}/>
+                    <Image src={'/g600.webp'} fill="true" style={{objectFit: "cover"}} loading="lazy" alt="g600"/>
                     <div className="absolute w-full h-full flex flex-col justify-between px-12 py-12 lg:px-36 lg:py-12">
                         <h4 className="lg:ext-2xl">Gulfstream</h4>
                         <h1 className="text-5xl lg:text-8xl">G600</h1>
@@ -43,7 +43,7 @@ export default function Fleet(){
                     </div>
                 </div>
                 <div className="relative w-full h-72 lg:h-96 font-bold">
-                    <Image src={'/falcon7x.webp'} fill="true" style={{objectFit: "cover"}}/>
+                    <Image src={'/falcon7x.webp'} fill="true" style={{objectFit: "cover"}} loading="lazy" alt="falcon7x"/>
                     <div className="absolute w-full h-full flex flex-col justify-between px-12 py-12 lg:px-36 lg:py-12">
                         <h4 className="lg:text-2xl">Dassault</h4>
                         <h1 className="text-5xl lg:text-8xl">Falcon 7X</h1>
