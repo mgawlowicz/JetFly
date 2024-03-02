@@ -11,7 +11,7 @@ export default function Nav() {
     return (
       <nav className="px-4 py-4 flex justify-between items-center lg:px-16 lg:justify-start lg:gap-24">
         <div className="flex gap-2 items-center font-bold">
-            <Image src='/logo.png' width={24} height={24}></Image>
+            <Image src='/logo.png' width={24} height={24} alt="JetFly-logo"></Image>
             <h1>JetFly</h1>
         </div>
         <div className={isOpen ? "flex flex-col fixed w-full h-full items-center justify-around top-0 left-0 bg-black py-16 font-semibold" : "hidden lg:flex lg:gap-16 lg:font-semibold"}>
