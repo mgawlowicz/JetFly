@@ -11,7 +11,7 @@ export default function Fleet(){
             </div>
             <div className="flex flex-col">
                 <div className="relative w-full h-72 lg:h-96 font-bold">
-                    <Image src={'/g550.webp'} fill="true" style={{objectFit: "cover"}} loading="lazy" alt="g550"/>
+                    <Image src={'/g550_out.webp'} fill="true" style={{objectFit: "cover"}} loading="lazy" alt="g550"/>
                     <div className="absolute w-full h-full flex flex-col justify-between px-12 py-12 lg:px-36 lg:py-12">
                         <h4 className="lg:text-2xl">Gulfstream</h4>
                         <h1 className="text-5xl lg:text-8xl">G550</h1>
