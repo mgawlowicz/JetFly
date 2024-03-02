@@ -6,7 +6,7 @@ export default function Form(){
         <div className="flex flex-col lg:flex-row px-4 lg:px-16 gap-12">
             <div className="flex flex-col gap-2 w-full">
                 <h3 className="uppercase font-bold text-2xl lg:text-4xl">Have questions?</h3>
-                <p className="text-gray-400 lg:text-xl">JetFly's team is here with expertise at your service. Get in touch today for swift and professional assistance.</p>
+                <p className="text-gray-400 lg:text-xl">JetFly is team is here with expertise at your service. Get in touch today for swift and professional assistance.</p>
             </div>
             <div className="flex flex-col gap-8 w-full">
                 <label id="name" className="flex flex-col gap-2">
