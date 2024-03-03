@@ -14,7 +14,7 @@ export default function Footer(){
                     
                 </div>
             </div>
-            <div className="flex w-full justify-center gap-12 font-semibold">
+            <div className="flex w-full justify-between lg:gap-12 lg:justify-center font-semibold">
                 <Link href="#" className="hover:text-gray-400">Charter</Link>
                 <Link href="#"className="hover:text-gray-400">Our Fleet</Link>
                 <Link href="#" className="hover:text-gray-400">About us</Link>

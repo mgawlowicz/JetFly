@@ -10,7 +10,6 @@ import Footer from '../components/Footer/footer'
 export default function Home() {
   return (
     <main className="flex flex-col gap-36">
-      <Nav />
       <Baner />
       <Experience />
       <Fleet />

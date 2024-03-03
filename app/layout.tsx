@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import Nav from "@/components/Nav/navbar";
 
-const inter = Montserrat({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "JetFly - Luxury Private Flights",
@@ -17,7 +18,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}<SpeedInsights /></body>
+      <body className={montserrat.className}>
+          <Nav />
+          {children}
+          <SpeedInsights />
+        </body>
     </html>
   );
 }
