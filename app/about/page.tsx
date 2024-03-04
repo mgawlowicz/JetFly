@@ -9,7 +9,7 @@ export default function Home() {
             <div className="px-4 lg:px-16 flex flex-col gap-12 pt-36">
                 <h1 className="lg:w-2/3 text-5xl lg:text-8xl font-bold">Let&apos;s get to know each other</h1>
                 <div className="flex justify-end">
-                    <p className="text-gray-400 w-3/4 lg:w-1/2 lg:text-xl">Welcome aboard JetFly! Whether you're a first-time traveler or a frequent flyer, we're here to make your journey unforgettable. Sit back, relax, and let's create amazing memories together!</p>
+                    <p className="text-gray-400 w-3/4 lg:w-1/2 lg:text-xl">Welcome aboard JetFly! Whether you&apos;re a first-time traveler or a frequent flyer, we&apos;re here to make your journey unforgettable. Sit back, relax, and let&apos;s create amazing memories together!</p>
                 </div>
                 <div className="relative">
                     {/* zle wyswietlane zdjecie! */}
