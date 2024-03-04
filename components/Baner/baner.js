@@ -39,6 +39,11 @@ const item = {
     }
 }
 
+const arrow = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { duration: 0.7}}
+}
+
 export default function Baner(){
 
     return(
@@ -62,6 +67,9 @@ export default function Baner(){
                 <motion.div variants={item}>
                     <Link href="#" className="flex w-max px-16 py-2 border-2 border-white border-solid font-semibold hover:bg-white hover:text-black transition duration-300 ease-in-out">Charter jet</Link>
                 </motion.div>
+            </motion.div>
+            <motion.div className="absolute bottom-8 flex justify-center w-full" variants={arrow} initial="hidden" animate="show">
+                <Image src={"/arrow_down.png"} width={24} height={24} alt="arrow_down"/>
             </motion.div>
         </div>
     )

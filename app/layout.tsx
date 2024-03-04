@@ -3,6 +3,7 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import Nav from "@/components/Nav/navbar";
+import Footer from "@/components/Footer/footer";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({
           <Nav />
           {children}
           <SpeedInsights />
+          <Footer />
         </body>
     </html>
   );

@@ -15,7 +15,6 @@ export default function Home() {
       <Fleet />
       <Map />
       <Form />
-      <Footer />
     </main>
   );
 }
