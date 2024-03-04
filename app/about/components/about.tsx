@@ -28,7 +28,7 @@ export default function About() {
                     </div>
                 </div>
             </div>
-            <Image src={'/team-meeting.webp'} width={1600} height={600} loading="lazy" alt="team" />
+            <Image src={'/team-meeting.webp'} width={1920} height={720} loading="lazy" alt="team" />
         </div>
     )
 }

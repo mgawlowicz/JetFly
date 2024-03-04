@@ -10,7 +10,7 @@ export default function Baner() {
             </div>
             <div className="relative">
                 {/* zle wyswietlane zdjecie! */}
-                <Image src={'/cockpit-view.webp'} width={1600} height={600} priority={true} alt="cockpit view" />
+                <Image src={'/cockpit-view.webp'} width={1920} height={720} priority={true} alt="cockpit view" />
             </div>
         </div>
     )
