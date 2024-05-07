@@ -8,7 +8,7 @@ export default function Nav() {
     const [isOpen, setOpen] = useState(false)
 
     return (
-      <nav className="px-4 py-4 flex justify-between items-center lg:px-16 lg:justify-start lg:gap-24 absolute top-0 left-0 z-10 w-full">
+      <nav className="px-4 py-4 flex justify-between items-center lg:px-16 lg:justify-start lg:gap-24 fixed z-10 w-full">
             <Link href="/" className="flex gap-2 items-center font-bold">
               <Image src='/logo.png' width={24} height={24} alt="JetFly-logo"></Image>
               <h1>JetFly</h1>
