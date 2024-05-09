@@ -159,7 +159,7 @@ export default function Map() {
                     )}
                 </div>
                 <div className="w-full">
-                    <Image src={'/map.webp'} width={1920} height={1080} loading="lazy" alt="offices map" />
+                    <Image src={'/map-new.webp'} width={1920} height={1080} loading="lazy" alt="offices map" />
                 </div>
             </div>
         </div>
