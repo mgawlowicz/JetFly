@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import React from "react";
 
 interface Plane {
     brand: string;
@@ -11,6 +12,11 @@ interface Plane {
         capacity: number;
     }
     slug: string;
+}
+
+interface Cities {
+    value: string;
+    code: string
 }
 
 const counter_icon = {
@@ -37,7 +43,6 @@ export default function Quote() {
         const fetchData = async () => {
         const res = await fetch('api/jets');
         const data = await res.json();
-        console.log(data)
         setPlanes(Object.values(data.data));
         };
 
@@ -77,6 +82,48 @@ export default function Quote() {
         }
     }
 
+    const [distance, setDistance] = useState(0);
+
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         const url = "https://wft-geo-db.p.rapidapi.com/v1/geo/cities/Q270/distance?distanceUnit=KM&toCityId=Q65"
+    //         const options = {
+    //             method: 'GET',
+    //             headers: {
+    //                 'X-RapidAPI-Key': 'c2118b143emshb4de575be6737e1p1cdd1bjsn67c72b1fb2c5',
+    //                 'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com'
+    //             }
+    //         }
+    //       const res = await fetch(url, options);
+    //       const data = await res.json();
+    //       console.log(data.data)
+    //       setDistance(data.data)
+    //     };
+    
+    //     fetchData();
+    //   }, []);
+    const [cities, setCities] = useState<Cities[]>([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const res = await fetch('api/cities');
+            const data = await res.json();
+            setCities(Object.values(data.data));
+        };
+
+        fetchData();
+    }, []);
+
+    const [value, setValue] = useState('')
+    const [showSuggestions, setShowSuggestions] = useState(false)
+    const suggestions = cities.filter(city => city.value.toLowerCase().includes(value.toLowerCase()));
+
+    const handleInputBlur = () => {
+        setTimeout(() => {
+            setShowSuggestions(false);
+        }, 200);
+    };
+
     return (
         <div className="flex flex-col gap-8 px-4 lg:px-16">
             <h3 className="uppercase font-bold text-2xl lg:text-4xl">Request a quote</h3>
@@ -88,11 +135,25 @@ export default function Quote() {
             <div className="w-full flex flex-col gap-8 lg:flex-row">
                 <div className="w-full flex-col gap-2">
                     <label id="from" className="font-semibold">Departure Airport</label>
-                    <select id="from" className="w-full py-2 bg-transparent outline-none border-b border-solid border-white" onChange={(e) => setDeparture(e.target.value)} required>
-                        <option value="JFK">JFK</option>
-                        <option value="JFK">JFK</option>
-                        <option value="JFK">JFK</option>
-                    </select>
+                    <div className="relative">
+                        <input 
+                            type="text"
+                            placeholder="Warsaw, Poland"
+                            value={value}
+                            className="w-full py-2 bg-transparent outline-none border-b border-solid border-white"
+                            onChange={(e) => setValue(e.target.value)}
+                            onFocus={() => setShowSuggestions(true)}
+                            onBlur={handleInputBlur}
+                            >
+                        </input>
+                        {showSuggestions && (
+                        <div className="absolute bg-neutral-900 w-full flex flex-col p-4 z-50 rounded-lg my-4 max-h-64 overflow-scroll">
+                        {suggestions.map((city, index) => (
+                            <a key={index} onClick={() => { setValue(city.value); setShowSuggestions(false)}} className="hover:bg-neutral-600 p-2 rounded-md no-scrollbar">{city.value}</a>
+                        ))}
+                        </div>
+                    )}
+                    </div>
                 </div>
                 <div className="w-full flex-col gap-2">
                     <label id="to" className="font-semibold">Arrival Airport</label>

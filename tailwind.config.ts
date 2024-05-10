@@ -19,6 +19,7 @@ const config: Config = {
       rotate: {
         '270' : '270deg'
       }
+      
     },
   },
   plugins: [],

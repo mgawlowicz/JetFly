@@ -1,0 +1,402 @@
+[
+    {   
+        "value": "Warsaw, PL",
+        "code": "Q270"
+    },
+    {
+        "value": "Lodz, PL",
+        "code": "Q580"
+    },
+    {
+        "value": "Krakow, PL",
+        "code": "Q31487"
+    },
+    {
+        "value": "Katowice, PL",
+        "code": "Q588"
+    },
+    {
+        "value": "Wroclaw, PL",
+        "code": "Q1799"
+    },
+    {
+        "value": "Rzeszow, PL",
+        "code": "Q598"
+    },    
+    {
+        "value": "Gdansk, PL",
+        "code": "Q1792"
+    },
+    {
+        "value": "New York, US",
+        "code": "Q60"
+    },
+    {
+        "value": "Los Angeles, US",
+        "code": "Q65"
+    },
+    {
+        "value": "Washington D.C, US",
+        "code": "Q61"
+    },
+    {
+        "value": "Atlanta, US",
+        "code": "Q23556"
+    },
+    {
+        "value": "Miami, US",
+        "code": "Q8652"
+    },
+    {
+        "value": "Houston, US",
+        "code": "Q16555"
+    },
+    {
+        "value": "San Francisco, US",
+        "code": "Q62"
+    },
+    {
+        "value": "New Orleans, US",
+        "code": "Q34404"
+    },
+    {
+        "value": "Chicago, US",
+        "code": "Q1297"
+    },
+    {
+        "value": "Las Vegas, US",
+        "code": "Q23768"
+    },
+    {
+        "value": "Phoenix, US",
+        "code": "Q16556"
+    },
+    {
+        "value": "Vancouver, CA",
+        "code": "Q24639"
+    },
+    {
+        "value": "Toronto, CA",
+        "code": "Q172"
+    },
+    {
+        "value": "Ottawa, CA",
+        "code": "Q1930"
+    },
+    {
+        "value": "Quebec City, CA",
+        "code": "Q2145"
+    },
+    {
+        "value": "Montreal, CA",
+        "code": "Q340"
+    },
+    {
+        "value": "London, UK",
+        "code": "Q92561"
+    },
+    {
+        "value": "Manchester, UK",
+        "code": "Q18125"
+    },
+    {
+        "value": "Liverpool, UK",
+        "code": "Q24826"
+    },
+    {
+        "value": "Birmingham, UK",
+        "code": "Q2256"
+    },
+    {
+        "value": "Glasgow, UK",
+        "code": "Q4093"
+    },
+    {
+        "value": "Melbourne, AU",
+        "code": "Q3141"
+    },
+    {
+        "value": "Sydney, AU",
+        "code": "Q3130"
+    },
+    {
+        "value": "Perth, AU",
+        "code": "Q3183"
+    },
+    {
+        "value": "Darwin, AU",
+        "code": "Q11568"
+    },
+    {
+        "value": "Brisbane, AU",
+        "code": "Q349323"
+    },
+    {
+        "value": "Canberra, AU",
+        "code": "Q3114"
+    },
+    {
+        "value": "Adelaide, AU",
+        "code": "Q5112"
+    },
+    {
+        "value": "Auckland, NZ",
+        "code": "Q37100"
+    },
+    {
+        "value": "Wellington, NZ",
+        "code": "Q23661"
+    },
+    {
+        "value": "Johannesburg, ZA",
+        "code": "Q34647"
+    },
+    {
+        "value": "Port Elizabeth, ZA",
+        "code": "Q125434"
+    },
+    {
+        "value": "Cape Town, ZA",
+        "code": "Q5465"
+    },
+    {
+        "value": "Bloemfontein, ZA",
+        "code": "Q37701"
+    },
+    {
+        "value": "Dubai, AE",
+        "code": "Q612"
+    },
+    {
+        "value": "Abu Dhabi, AE",
+        "code": "Q1519"
+    },
+    {
+        "value": "Doha, QA",
+        "code": "Q3861"
+    },
+    {
+        "value": "Beijing, CN",
+        "code": "Q956"
+    },
+    {
+        "value": "Wuhan, CN",
+        "code": "Q11746"
+    },
+    {
+        "value": "Chengdu, CN",
+        "code": "Q30002"
+    },
+    {
+        "value": "Shenzhen, CN",
+        "code": "Q15174"
+    },
+    {
+        "value": "Hangzhou, CN",
+        "code": "Q4970"
+    },
+    {
+        "value": "Shanghai, CN",
+        "code": "Q8686"
+    },
+    {
+        "value": "Taipei, TW",
+        "code": "Q1867"
+    },
+    {
+        "value": "Hongkong, HK",
+        "code": "Q8646"
+    },
+    {
+        "value": "Seoul, KR",
+        "code": "Q8684"
+    },
+    {
+        "value": "Incheon, KR",
+        "code": ""
+    },
+    {
+        "value": "Gwangju, KR",
+        "code": ""
+    },
+    {
+        "value": "Busan, KR",
+        "code": ""
+    },
+    {
+        "value": "Tokio, JP",
+        "code": ""
+    },
+    {
+        "value": "Hiroshima, JP",
+        "code": ""
+    },
+    {
+        "value": "Fukuoka, JP",
+        "code": ""
+    },
+    {
+        "value": "Osaka, JP",
+        "code": ""
+    },
+    {
+        "value": "Singapore, SG",
+        "code": ""
+    },
+    {
+        "value": "Jakarta, IN",
+        "code": ""
+    },
+    {
+        "value": "Kuala Lumpur, MY",
+        "code": ""
+    },
+    {
+        "value": "Manila, PH",
+        "code": ""
+    },
+    {
+        "value": "Bangkok, TH",
+        "code": ""
+    },
+    {
+        "value": "Dhaka, BD",
+        "code": ""
+    },
+    {
+        "value": "Ankara, TR",
+        "code": ""
+    },
+    {
+        "value": "Athens, GR",
+        "code": ""
+    },
+    {
+        "value": "Rome, IT",
+        "code": ""
+    },
+    {
+        "value": "Mediolan, IT",
+        "code": ""
+    },
+    {
+        "value": "Nicea, FR",
+        "code": ""
+    },
+    {
+        "value": "Paris, FR",
+        "code": ""
+    },
+    {
+        "value": "Madrit, ES",
+        "code": ""
+    },
+    {
+        "value": "Barcelona, ES",
+        "code": ""
+    },
+    {
+        "value": "Berlin, DE",
+        "code": ""
+    },
+    {
+        "value": "Hamburg, DE",
+        "code": ""
+    },
+    {
+        "value": "Dusseldorf, DE",
+        "code": ""
+    },
+    {
+        "value": "Dortmund, DE",
+        "code": ""
+    },
+    {
+        "value": "Monachium, DE",
+        "code": ""
+    },
+    {
+        "value": "Amsterdam, NL",
+        "code": ""
+    },
+    {
+        "value": "Rotterdam, NL",
+        "code": ""
+    },
+    {
+        "value": "Brussels, BE",
+        "code": ""
+    },
+    {
+        "value": "Rio de Janerio, BR",
+        "code": ""
+    },
+    {
+        "value": "Sao Paulo, BR",
+        "code": ""
+    },
+    {
+        "value": "Brasilia, BR",
+        "code": ""
+    },
+    {
+        "value": "Porto, BR",
+        "code": ""
+    },
+    {
+        "value": "Buenos Aires, AR",
+        "code": ""
+    },
+    {
+        "value": "Santiago, CL",
+        "code": ""
+    },
+    {
+        "value": "Lima, PE",
+        "code": ""
+    },
+    {
+        "value": "Bogota, CO",
+        "code": ""
+    },
+    {
+        "value": "Santo Domingo, DO",
+        "code": ""
+    },
+    {
+        "value": "Dakar, SN",
+        "code": ""
+    },
+    {
+        "value": "Nairobi, KE",
+        "code": ""
+    },
+    {
+        "value": "Cairo, EG",
+        "code": ""
+    },
+    {
+        "value": "Oslo, NO",
+        "code": ""
+    },
+    {
+        "value": "Stockholm, SE",
+        "code": ""
+    },
+    {
+        "value": "Helsinki, FI",
+        "code": ""
+    },
+    {
+        "value": "Reykjavik, IS",
+        "code": ""
+    },
+    {
+        "value": "Dublin, IE",
+        "code": ""
+    },
+    {
+        "value": "Budapest, HU",
+        "code": ""
+    }
+]
