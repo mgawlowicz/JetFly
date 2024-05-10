@@ -52,14 +52,14 @@ export default function Home(){
     return(
       <>
         {plane.map((data, index) => (
-          <main className="flex flex-col gap-36 w-full" key={index}>
-            <div className="w-full h-128 relative overflow-hidden">
+          <main className="flex flex-col gap-24 lg:gap-36 w-full" key={index}>
+            <div className="w-full h-64 lg:h-128 relative overflow-hidden">
               <Image src={`/Jets/${data.slug}/${data.image.url}`} alt={data.image.alt} fill={true} priority={true} style={{objectFit: "cover"}}/>
             </div>
-            <div className="flex px-16 gap-12">
+            <div className="flex flex-col lg:flex-row px-4 lg:px-16 gap-12">
               <div className="w-full flex flex-col gap-2">
-                <h2 className="text-6xl font-semibold">{data.brand} {data.model}</h2>
-                <p className="text-xl text-gray-400">{data.description}</p>
+                <h2 className="text-4xl lg:text-6xl font-semibold">{data.brand} {data.model}</h2>
+                <p className="lg:text-xl text-gray-400">{data.description}</p>
               </div>
               <div className="w-full">
                 <div className="flex justify-between py-4 border-b border-solid border-neutral-600">
@@ -80,16 +80,16 @@ export default function Home(){
                 </div>
               </div>
             </div>
-            <div className="px-16 flex flex-col gap-4">
+            <div className="px-4 lg:px-16 flex flex-col gap-4">
               <h3 className="uppercase font-bold text-2xl lg:text-4xl">Interior</h3>
-              <div className="flex">
-                <div className="w-1/3 px-2">
+              <div className="flex flex-col lg:flex-row gap-4 lg:gap-0">
+                <div className="w-full lg:w-1/3 lg:px-2">
                   <Image src={`/Jets/${data.slug}/${data.image.interior.first.url}`} width={900} height={600} alt={data.image.interior.first.alt}/>
                 </div>
-                <div className="w-1/3 px-2">
+                <div className="w-full lg:w-1/3 lg:px-2">
                   <Image src={`/jets/${data.slug}/${data.image.interior.second.url}`} width={900} height={600} alt={data.image.interior.second.alt}/>
                 </div>
-                <div className="w-1/3 px-2">
+                <div className="w-full lg:w-1/3 lg:px-2">
                   <Image src={`/Jets/${data.slug}/${data.image.interior.third.url}`} width={900} height={600} alt={data.image.interior.third.alt}/>
                 </div>
               </div>
