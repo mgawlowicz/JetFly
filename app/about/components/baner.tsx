@@ -9,7 +9,6 @@ export default function Baner() {
                 <p className="text-gray-400 w-3/4 lg:w-1/2 lg:text-xl">Welcome aboard JetFly! Whether you&apos;re a first-time traveler or a frequent flyer, we&apos;re here to make your journey unforgettable. Sit back, relax, and let&apos;s create amazing memories together!</p>
             </div>
             <div className="relative">
-                {/* zle wyswietlane zdjecie! */}
                 <Image src={'/cockpit-view.webp'} width={1920} height={720} priority={true} alt="cockpit view" />
             </div>
         </div>
