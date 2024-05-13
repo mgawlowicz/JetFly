@@ -4,10 +4,10 @@
         "model": "G550",
         "description": "Gulfstream G550 stands as the undisputed leader in the realm of business aviation. With its elegant interior, comfortable seating, and outstanding speed, it delivers unforgettable experiences for our clients. It offers a unique balance of luxury and efficiency, making travel a pleasure.",
         "details": {
-            "speed": "904km/h",
+            "speed": 904,
             "range": "10,850km",
             "capacity": 18,
-            "price": "$4999/h"
+            "price": 4999
         },
         "image": {
             "url": "g-550.webp",
@@ -34,10 +34,10 @@
         "model": "G600",
         "description": "The Gulfstream G600 epitomizes excellence in modern aviation. Boasting a sophisticated cabin design, plush seating, and remarkable speed, it redefines luxury travel. Its fusion of opulence and performance ensures unparalleled comfort and efficiency for discerning travelers, setting new standards in the world of business aviation.",
         "details": {
-            "speed": "940km/h",
+            "speed": 940,
             "range": "12,000km",
             "capacity": 13,
-            "price": "$8999/h"
+            "price": 8999
         },
         "image": {
             "url": "g-600.webp",
@@ -64,10 +64,10 @@
         "model": "Falcon 7X",
         "description": "The Dassault Falcon 7X redefines the art of flying. With its meticulously crafted interior, spacious seating, and unparalleled performance, it offers an unmatched experience in business travel. Seamlessly blending comfort and capability, it provides a journey that is as luxurious as it is efficient, elevating the expectations of even the most seasoned travelers.",
         "details": {
-            "speed": "950km/h",
+            "speed": 950,
             "range": "11,000km",
             "capacity": 14,
-            "price": "$6999/h"
+            "price": 6999
         },
         "image": {
             "url": "falcon-7x.webp",
@@ -94,10 +94,10 @@
         "model": "Praetor 600",
         "description": "The Embraer Praetor 600 redefines luxury and performance in the world of business aviation. With its meticulously designed cabin, spacious seating, and exceptional range, it offers an unparalleled experience for discerning travelers. Seamlessly blending style with efficiency, it sets a new standard for comfort and sophistication in every journey.",
         "details": {
-            "speed": "1005km/h",
+            "speed": 1005,
             "range": "5800km",
             "capacity": 9,
-            "price": "$4499/h"
+            "price": 4499
         },
         "image": {
             "url": "praetor-600.webp",
@@ -124,10 +124,10 @@
         "model": "Learjet 45",
         "description": "The Bombardier Learjet 45 exemplifies timeless luxury in aviation. With its meticulously crafted cabin, comfortable seating, and exceptional performance, it offers a journey that is as refined as it is efficient. Combining elegance with reliability, it caters to the discerning tastes of travelers seeking unparalleled comfort and style in every flight.",
         "details": {
-            "speed": "905km/h",
+            "speed": 905,
             "range": "11,850km",
             "capacity": 12,
-            "price": "$6999/h"
+            "price": 6999
         },
         "image": {
             "url": "learjet-45-new.webp",
@@ -154,10 +154,10 @@
         "model": "Global 6000",
         "description": "The Bombardier Global 6000 epitomizes the pinnacle of sophistication in business aviation. Featuring a lavishly appointed interior, spacious seating, and impressive range, it ensures an unparalleled level of comfort and convenience for its passengers. Its seamless fusion of luxury and performance redefines the travel experience, making every journey a celebration of refinement and elegance.",
         "details": {
-            "speed": "950km/h",
+            "speed": 950,
             "range": "11,100km",
             "capacity": 17,
-            "price": "$7999/h"
+            "price": 7999
         },
         "image": {
             "url": "global-6000-nero.webp",
@@ -184,10 +184,10 @@
         "model": "Learjet 75",
         "description": "The Bombardier Learjet 75 sets the standard for luxury travel. With its meticulously designed cabin, ergonomic seating, and exceptional speed, it offers a journey that is both indulgent and efficient. Its unparalleled blend of style and performance caters to the desires of discerning travelers, elevating every flight into a refined experience of luxury and comfort.",
         "details": {
-            "speed": "860km/h",
+            "speed": 860,
             "range": "3800km",
             "capacity": 9,
-            "price": "$2499/h"
+            "price": 2499
         },
         "image": {
             "url": "learjet-75.webp",
@@ -214,10 +214,10 @@
         "model": "Legacy 650E",
         "description": "The Embraer Legacy 650E embodies sophistication and comfort in the skies. Boasting a meticulously crafted interior, spacious seating, and impressive range, it ensures an unforgettable journey for every passenger. Its commitment to luxury and performance makes it the preferred choice for travelers seeking elegance and efficiency in their travels, setting new standards for excellence in business aviation.",
         "details": {
-            "speed": "850km/h",
+            "speed": 850,
             "range": "7300km",
             "capacity": 14,
-            "price": "$5999/h"
+            "price": 5999
         },
         "image": {
             "url": "legacy-650e.webp",
@@ -244,10 +244,10 @@
         "model": "Global 8000",
         "description": "The Bombardier Global 8000 redefines the boundaries of luxury travel. Featuring an exquisitely appointed cabin, ample seating, and unparalleled range, it offers an unmatched experience for discerning travelers. Its seamless integration of opulence and performance transforms every journey into a lavish escape, setting a new benchmark for sophistication and comfort in the world of business aviation.",
         "details": {
-            "speed": "1000km/h",
+            "speed": 1000,
             "range": "14800km",
             "capacity": 19,
-            "price": "$15999/h"
+            "price": 15999
         },
         "image": {
             "url": "global-8000.webp",
