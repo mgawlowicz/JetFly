@@ -87,7 +87,7 @@ export default function Home(){
                   <Image src={`/Jets/${data.slug}/${data.image.interior.first.url}`} width={900} height={600} alt={data.image.interior.first.alt}/>
                 </div>
                 <div className="w-full lg:w-1/3 lg:px-2">
-                  <Image src={`/jets/${data.slug}/${data.image.interior.second.url}`} width={900} height={600} alt={data.image.interior.second.alt}/>
+                  <Image src={`/Jets/${data.slug}/${data.image.interior.second.url}`} width={900} height={600} alt={data.image.interior.second.alt}/>
                 </div>
                 <div className="w-full lg:w-1/3 lg:px-2">
                   <Image src={`/Jets/${data.slug}/${data.image.interior.third.url}`} width={900} height={600} alt={data.image.interior.third.alt}/>
