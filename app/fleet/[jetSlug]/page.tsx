@@ -64,7 +64,7 @@ export default function Home(){
               <div className="w-full">
                 <div className="flex justify-between py-4 border-b border-solid border-neutral-600">
                   <h5 className="uppercase">Speed</h5>
-                  <h5>{data.details.speed}</h5>
+                  <h5>{data.details.speed}km/h</h5>
                 </div>
                 <div className="flex justify-between py-4 border-b border-solid border-neutral-600">
                   <h5 className="uppercase">Range</h5>
@@ -76,7 +76,7 @@ export default function Home(){
                 </div>
                 <div className="flex justify-between py-4 border-b border-solid border-neutral-600">
                   <h5 className="uppercase">Price</h5>
-                  <h5>{data.details.price}</h5>
+                  <h5>${data.details.price}/h</h5>
                 </div>
               </div>
             </div>

@@ -70,7 +70,6 @@ export default function Quote() {
                 };
                 const res = await fetch(url, options);
                 const data = await res.json();
-                console.log(data.data);
                 setDistance(data.data);
             };
             fetchDistanceData();
@@ -80,7 +79,7 @@ export default function Quote() {
     useEffect(() => {
         const selectedPlane = planes.find(plane => plane.slug === jetSlug);
         if(selectedPlane){
-            const time = distance / selectedPlane.details.speed
+            const time = Math.floor(distance / selectedPlane.details.speed)
             if(time > 1){
                 setPrice(Math.ceil(time * selectedPlane.details.price))
             } else {

@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import Form from '@/components/Form/form';
+import { motion } from 'framer-motion'
 
 interface Plane {
   brand: string;
@@ -60,7 +61,7 @@ const YourComponent = () => {
                   <div className='flex justify-between w-full items-end'>
                     <div>
                       <h5 className='font-semibold'>Starting at</h5>
-                      <h5 className='lg:text-xl font-semibold'>{plane.details.price}</h5>
+                      <h5 className='lg:text-xl font-semibold'>${plane.details.price}/h</h5>
                     </div>
                     <div className='flex gap-2 justify-end'>
                       <p className='font-semibold'>View</p>
