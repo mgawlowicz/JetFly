@@ -53,8 +53,8 @@ export default function Home(){
       <>
         {plane.map((data, index) => (
           <main className="flex flex-col gap-24 lg:gap-36 w-full" key={index}>
-            <div className="w-full h-64 lg:h-128 relative overflow-hidden">
-              <Image src={`/Jets/${data.slug}/${data.image.url}`} alt={data.image.alt} fill={true} priority={true} style={{objectFit: "cover"}}/>
+            <div className="w-full h-64 lg:h-128 relative">
+              <Image src={`/Jets/${data.slug}/${data.image.url}`} alt={data.image.alt} fill={true} priority={true} className="object-cover object-center"/>
             </div>
             <div className="flex flex-col lg:flex-row px-4 lg:px-16 gap-12">
               <div className="w-full flex flex-col gap-2">
