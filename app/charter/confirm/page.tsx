@@ -1,6 +1,18 @@
 "use client"
 import Image from "next/image"
+import Link from "next/link";
 import { useState, useEffect } from "react"
+
+interface Bonus {
+    name: string;
+    description: string;
+    image: {
+        url: string,
+        alt: string,
+    }
+    price: number;
+    slug: string;
+}
 
 interface Plane {
     brand: string;
@@ -10,7 +22,7 @@ interface Plane {
       speed: string;
       range: string;
       capacity: number;
-      price: string;
+      price: number;
     };
     image: {
       url: string,
@@ -31,21 +43,27 @@ interface Plane {
       }
     }
     slug: string;
-  }
+}
 
 export default function Confirm({searchParams} : {searchParams: {departure: string, arrival: string, passengers: number, price: number, distance: number, jetSlug: string, datetime: string}}) {
-    const [openState, setOpenState] = useState<{ [key: string]: boolean }>({ Wine: false, Limousine: false, Chuj: false });
+    const [openState, setOpenState] = useState<{ [key: string]: boolean }>({ Wine: false, Limousine: false, Meal: false });
+    const [bonus, setBonus] = useState<Bonus[]>([]);
+    const [greenTax, setGreenTax] = useState(Math.floor(searchParams.price * 0.07));
+    const [vat, setVat] = useState(Math.floor(searchParams.price * 0.08));
+    const [totalPrice, setTotalPrice] = useState(searchParams.price);
+    const [extraCost, setExtraCost] = useState(0);
+    const [isFormValid, setIsFormValid] = useState(false);
+    const [name, setName] = useState('');
+    const [surname, setSurname] = useState('');
+    const [email, setEmail] = useState('');
+    const [tel, setTel] = useState('');
 
     const handleClick = (location: string) => {
         setOpenState(prevState => {
             const updatedState: { [key: string]: boolean } = {};
             for (const key in prevState) {
                 if (Object.prototype.hasOwnProperty.call(prevState, key)) {
-                    if (key === location) {
-                        updatedState[key] = !prevState[key];
-                    } else {
-                        updatedState[key] = prevState[key];
-                    }
+                    updatedState[key] = key === location ? !prevState[key] : prevState[key];
                 }
             }
             return updatedState;
@@ -60,13 +78,39 @@ export default function Confirm({searchParams} : {searchParams: {departure: stri
             const data = await res.json();
             setPlane(Object.values(data.jet));
         };
-    
+
         fetchData();
     }, []);
 
+    useEffect(() => {
+        const fetchdata = async () => {
+            const res = await fetch('/api/bonus');
+            const data = await res.json();
+            setBonus(Object.values(data.data));
+        }
+
+        fetchdata();
+    }, []);
+
+    useEffect(() => {
+        let newExtraCost = 0;
+        for (const item of bonus) {
+            if (openState[item.slug]) {
+                newExtraCost += item.price;
+            }
+        }
+        setExtraCost(newExtraCost);
+        setTotalPrice(Number(searchParams.price) + newExtraCost);
+    }, [openState, bonus, searchParams.price]);
+
+
+    useEffect(() => {
+        setIsFormValid(name !== '' && surname !== '' && email !== '' && tel !== '');
+    }, [name, surname, email, tel]);
+
     return (
-        <main className="flex flex-col gap-20 lg:gap-36 w-full">
-            <div className="flex pt-36 lg:px-12 gap-8">
+        <main className="flex flex-col gap-20 lg:gap-36 w-full relative">
+                <div className="flex pt-36 lg:px-12 gap-8">
                 <form className="w-full flex flex-col gap-8">
                     {plane.map((item, index) => (
                         <div className="border border-solid border-neutral-600 p-4 flex gap-8" key={index}>
@@ -100,61 +144,40 @@ export default function Confirm({searchParams} : {searchParams: {departure: stri
                     <h3 className="uppercase font-bold text-xl lg:text-xl">Enter your details</h3>
                     <div className="flex gap-8">
                         <div className="w-full">
-                            <label htmlFor="name" className="font-semibold">Name</label>
-                            <input type="text" id="name" className="w-full py-2 bg-transparent outline-none border-b border-white border-solid" placeholder="John"></input>
+                            <label htmlFor="name" className="font-semibold">Name *</label>
+                            <input type="text" id="name" className="w-full py-2 bg-transparent outline-none border-b border-white border-solid" placeholder="John" onChange={(e) => setName(e.target.value)}></input>
                         </div>
                         <div className="w-full">
-                            <label htmlFor="surname" className="font-semibold">Surname</label>
-                            <input type="text" id="surname" className="w-full py-2 bg-transparent outline-none border-b border-white border-solid" placeholder="Smith"></input>
+                            <label htmlFor="surname" className="font-semibold">Surname *</label>
+                            <input type="text" id="surname" className="w-full py-2 bg-transparent outline-none border-b border-white border-solid" placeholder="Smith" onChange={(e) => setSurname(e.target.value)}></input>
                         </div>
                     </div>
                     <div className="flex gap-8">
                         <div className="w-full">
-                            <label htmlFor="email" className="font-semibold">Email</label>
-                            <input type="email" className="w-full py-2 bg-transparent outline-none border-b border-white border-solid" placeholder="email@email.com"></input>
+                            <label htmlFor="email" className="font-semibold">Email *</label>
+                            <input type="email" className="w-full py-2 bg-transparent outline-none border-b border-white border-solid" placeholder="email@email.com" onChange={(e) => setEmail(e.target.value)}></input>
                         </div>
                         <div className="w-full">
-                            <label htmlFor="phone" className="font-semibold">Phone number</label>
-                            <input type="tel" className="w-full py-2 bg-transparent outline-none border-b border-white border-solid" placeholder="+48 123-456-789"></input>
+                            <label htmlFor="phone" className="font-semibold">Phone number *</label>
+                            <input type="tel" className="w-full py-2 bg-transparent outline-none border-b border-white border-solid" placeholder="+48 123-456-789" onChange={(e) => setTel(e.target.value)}></input>
                         </div>
                     </div>
+                    <p>* Required fields</p>
                     <div className="flex flex-col gap-4">
                         <h5 className="font-semibold text-xl">Add to your flight</h5>
-                        <div className="flex flex-col gap-2">
-                            <div className={`border border-solid p-4 flex justify-between ${openState['Wine'] ? "border-white" : "border-neutral-600"}`} onClick={() => handleClick('Wine')}>
-                                <div className="flex gap-4 flex">
-                                    <Image src="/wine.png" width={48} height={48} alt="wine"></Image>
-                                    <div>
-                                        <h5 className="text-lg font-semibold">Bottle of wine</h5>
-                                        <p className="text-gray-400">Château Montrose Saint-Estèphe</p>
+                        <div className="flex flex-col gap-4">
+                            {bonus.map((item, index) => (
+                                <div key={index} className={`border border-solid p-4 flex justify-between ${openState[item.slug] ? "border-white" : "border-neutral-600"}`} onClick={() => handleClick(item.slug)}>
+                                    <div className="flex gap-4 flex">
+                                        <Image src={`/${item.image.url}`} width={48} height={48} alt={item.image.alt}/>
+                                        <div>
+                                            <h5 className="text-lg font-semibold">{item.name}</h5>
+                                            <p className="text-gray-400">{item.description}</p>
+                                        </div>
                                     </div>
+                                    <h5 className="text-xl">${item.price}</h5>
                                 </div>
-                                <h5 className="text-xl">$100</h5>
-                            </div>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <div className={`border border-solid p-4 flex justify-between ${openState['Limousine'] ? "border-white" : "border-neutral-600"}`} onClick={() => handleClick('Limousine')}>
-                                <div className="flex gap-4 flex">
-                                    <Image src="/car.png" width={48} height={48} alt="wine"></Image>
-                                    <div>
-                                        <h5 className="text-lg font-semibold">Luxury Limousine</h5>
-                                        <p className="text-gray-400">Limousine transport from Airport</p>
-                                    </div>
-                                </div>
-                                <h5 className="text-xl">$500</h5>
-                            </div>
-                        </div>
-                        <div className="flex flex-col gap-2">
-                            <div className={`border border-solid p-4 flex justify-between ${openState['Chuj'] ? "border-white" : "border-neutral-600"}`} onClick={() => handleClick('Chuj')}>
-                                <div className="flex gap-4 flex">
-                                    <Image src="/wine.png" width={48} height={48} alt="wine"></Image>
-                                    <div>
-                                        <h5 className="text-lg font-semibold">Bottle of wine</h5>
-                                        <p className="text-gray-400">Château Montrose Saint-Estèphe</p>
-                                    </div>
-                                </div>
-                                <h5 className="text-xl">$100</h5>
-                            </div>
+                            ))}
                         </div>
                     </div>
                 </form>
@@ -190,13 +213,13 @@ export default function Confirm({searchParams} : {searchParams: {departure: stri
                         <h5 className="uppercase font-semibold text-xl">Your price summary</h5>
                         <div className="flex justify-between">
                             <p>7% Green tax:</p>
-                            <p>$45</p>
+                            <p>${greenTax}</p>
                         </div>
                         <div className="flex justify-between">
                             <p>8% VAT:</p>
-                            <p>$56</p>
+                            <p>${vat}</p>
                         </div>
-                        {openState['Wine'] || openState['Limousine'] || openState['Chuj'] ? (
+                        {openState['Wine'] || openState['Limousine'] || openState['Meal'] ? (
                             <div className="flex flex-col gap-2">
                                 <h5 className="font-semibold text-lg">Extra:</h5>
                                 {openState['Wine'] && (
@@ -211,10 +234,10 @@ export default function Confirm({searchParams} : {searchParams: {departure: stri
                                         <p>$500</p>
                                     </div>
                                 )}
-                                {openState['Chuj'] && (
+                                {openState['Meal'] && (
                                     <div className="flex justify-between">
-                                        <p>Bottle of Wine</p>
-                                        <p>$100</p>
+                                        <p>Gourmet Meal</p>
+                                        <p>$200</p>
                                     </div>
                                 )}
                             </div>
@@ -222,9 +245,9 @@ export default function Confirm({searchParams} : {searchParams: {departure: stri
                     </div>
                     <div className="flex gap-2">
                         <h4 className="text-2xl font-semibold">Total Price:</h4>
-                        <h4 className="text-2xl font-semibold">${searchParams.price}</h4>
+                        <h4 className="text-2xl font-semibold">${totalPrice}</h4>
                     </div>
-                    <button className="border border-white border-solid py-2 hover:bg-white hover:text-black transition duration-300 ease-in-out font-semibold">Confirm</button>
+                    <Link href="./confirmed" className={`border border-white border-solid py-2 hover:bg-white hover:text-black transition duration-300 ease-in-out font-semibold text-center ${isFormValid ? 'hover:bg-white hover:text-black' : 'opacity-50 cursor-not-allowed pointer-events-none'}`}>Confirm</Link>
                 </div>
             </div>
         </main>

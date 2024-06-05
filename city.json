@@ -213,31 +213,31 @@
     },
     {
         "value": "Incheon, KR",
-        "code": ""
+        "code": "Q20934"
     },
     {
         "value": "Gwangju, KR",
-        "code": ""
+        "code": "Q41283"
     },
     {
         "value": "Busan, KR",
-        "code": ""
+        "code": "Q16520"
     },
     {
         "value": "Tokio, JP",
-        "code": ""
+        "code": "Q1490"
     },
     {
         "value": "Hiroshima, JP",
-        "code": ""
+        "code": "Q34664"
     },
     {
         "value": "Fukuoka, JP",
-        "code": ""
+        "code": "Q26600"
     },
     {
         "value": "Osaka, JP",
-        "code": ""
+        "code": "Q35765"
     },
     {
         "value": "Singapore, SG",
@@ -245,51 +245,51 @@
     },
     {
         "value": "Jakarta, IN",
-        "code": ""
+        "code": "Q334"
     },
     {
         "value": "Kuala Lumpur, MY",
-        "code": ""
+        "code": "Q1865"
     },
     {
         "value": "Manila, PH",
-        "code": ""
+        "code": "Q1461"
     },
     {
         "value": "Bangkok, TH",
-        "code": ""
+        "code": "Q1861"
     },
     {
         "value": "Dhaka, BD",
-        "code": ""
+        "code": "Q1354"
     },
     {
         "value": "Ankara, TR",
-        "code": ""
+        "code": "Q3640"
     },
     {
         "value": "Athens, GR",
-        "code": ""
+        "code": "Q1524"
     },
     {
         "value": "Rome, IT",
-        "code": ""
+        "code": "Q220"
     },
     {
         "value": "Mediolan, IT",
-        "code": ""
+        "code": "Q490"
     },
     {
-        "value": "Nicea, FR",
-        "code": ""
+        "value": "Nice, FR",
+        "code": "Q33959"
     },
     {
         "value": "Paris, FR",
-        "code": ""
+        "code": "Q90"
     },
     {
-        "value": "Madrit, ES",
-        "code": ""
+        "value": "Madrid, ES",
+        "code": "Q2807"
     },
     {
         "value": "Barcelona, ES",
@@ -301,51 +301,47 @@
     },
     {
         "value": "Hamburg, DE",
-        "code": ""
+        "code": "Q1492"
     },
     {
         "value": "Dusseldorf, DE",
-        "code": ""
+        "code": "Q1718"
     },
     {
         "value": "Dortmund, DE",
-        "code": ""
+        "code": "Q1295"
     },
     {
         "value": "Monachium, DE",
-        "code": ""
+        "code": "Q1726"
     },
     {
         "value": "Amsterdam, NL",
-        "code": ""
+        "code": "Q727"
     },
     {
         "value": "Rotterdam, NL",
-        "code": ""
+        "code": "Q34370"
     },
     {
         "value": "Brussels, BE",
-        "code": ""
+        "code": "Q239"
     },
     {
-        "value": "Rio de Janerio, BR",
-        "code": ""
+        "value": "Rio de Janeiro, BR",
+        "code": "Q8678"
     },
     {
         "value": "Sao Paulo, BR",
-        "code": ""
+        "code": "Q174"
     },
     {
         "value": "Brasilia, BR",
-        "code": ""
-    },
-    {
-        "value": "Porto, BR",
-        "code": ""
+        "code": "Q2844"
     },
     {
         "value": "Buenos Aires, AR",
-        "code": ""
+        "code": "Q1486"
     },
     {
         "value": "Santiago, CL",
@@ -353,50 +349,50 @@
     },
     {
         "value": "Lima, PE",
-        "code": ""
+        "code": "Q2887"
     },
     {
         "value": "Bogota, CO",
-        "code": ""
+        "code": "Q2841"
     },
     {
         "value": "Santo Domingo, DO",
-        "code": ""
+        "code": "Q34820"
     },
     {
         "value": "Dakar, SN",
-        "code": ""
+        "code": "Q3717"
     },
     {
         "value": "Nairobi, KE",
-        "code": ""
+        "code": "Q3870"
     },
     {
         "value": "Cairo, EG",
-        "code": ""
+        "code": "Q85"
     },
     {
         "value": "Oslo, NO",
-        "code": ""
+        "code": "Q585"
     },
     {
         "value": "Stockholm, SE",
-        "code": ""
+        "code": "Q1754"
     },
     {
         "value": "Helsinki, FI",
-        "code": ""
+        "code": "Q1757"
     },
     {
         "value": "Reykjavik, IS",
-        "code": ""
+        "code": "Q1764"
     },
     {
         "value": "Dublin, IE",
-        "code": ""
+        "code": "Q1761"
     },
     {
         "value": "Budapest, HU",
-        "code": ""
+        "code": "Q1781"
     }
 ]

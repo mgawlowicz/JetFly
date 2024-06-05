@@ -83,10 +83,10 @@ export default function Quote() {
             if(time > 1){
                 setPrice(Math.ceil(time * selectedPlane.details.price))
             } else {
-                setPrice(selectedPlane.details.price)
+                setPrice(selectedPlane.details.price * 2)
             }
         }
-    }, [distance, jetSlug])
+    }, [distance, jetSlug, planes])
 
     const [isFormValid, setIsFormValid] = useState(false);
 
@@ -104,30 +104,33 @@ export default function Quote() {
             </div>
             <div className="w-full flex flex-col gap-8 lg:flex-row">
                 <div className="w-full flex-col gap-2">
-                    <label id="from" className="font-semibold">Departure Airport</label>
+                    <label id="from" className="font-semibold">Departure Airport *</label>
                     <DepartureInput cities={cities} setDeparture={setDeparture} departure={departure} setDepartureCode={setDepartureCode}/>
                 </div>
                 <div className="w-full flex-col gap-2">
-                    <label id="to" className="font-semibold">Arrival Airport</label>
+                    <label id="to" className="font-semibold">Arrival Airport *</label>
                     <ArrivalInput cities={cities} setArrival={setArrival} arrival={arrival} setArrivalCode={setArrivalCode}/>
                 </div>
                 <div className="w-full flex-col gap-2">
-                    <p className="font-semibold">Jet</p>
+                    <p className="font-semibold">Jet *</p>
                     <JetInput planes={planes} setJet={setJet} jet={jet} setJetSlug={setJetSlug} jetSlug={jetSlug}/>
                 </div>
             </div>
             <div className="flex flex-col lg:flex-row gap-8 lg:justify-between lg:items-end">
-                <div className="flex gap-8">
-                    <div className="flex flex-col gap-2">
-                        <p className="font-semibold">Passengers</p>
-                        <PassengersInput planes={planes} setPassengers={setPassengers} passengers={passengers} jetSlug={jetSlug}/>
-                    </div>
-                    <div className="flex flex-col gap-2">
-                        <p className="font-semibold">Date</p>
-                        <div className="flex gap-2">
-                            <input type="datetime-local" className="bg-transparent outline-none w-10/12" style={{colorScheme: 'dark'}} onChange={(e) => setDatetime(e.target.value)}></input>
+                <div className="flex flex-col gap-8">
+                    <div className="flex gap-8">
+                        <div className="flex flex-col gap-2">
+                            <p className="font-semibold">Passengers *</p>
+                            <PassengersInput planes={planes} setPassengers={setPassengers} passengers={passengers} jetSlug={jetSlug}/>
+                        </div>
+                        <div className="flex flex-col gap-2">
+                            <p className="font-semibold">Date *</p>
+                            <div className="flex gap-2">
+                                <input type="datetime-local" className="bg-transparent outline-none w-10/12" style={{colorScheme: 'dark'}} onChange={(e) => setDatetime(e.target.value)}></input>
+                            </div>
                         </div>
                     </div>
+                    <p>* Required fields</p>
                 </div>
                 <div className="w-full lg:w-1/2 flex flex-col lg:flex-row gap-8 lg:justify-end lg:items-center">
                     <div className="flex gap-2">

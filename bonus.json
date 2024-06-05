@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Bottle of wine",
+        "description": "Château Montrose Saint-Estèphe",
+        "image": {
+            "url": "wine.png",
+            "alt": "wine-icon"
+        },
+        "price": 100,
+        "slug": "Wine"
+    },
+    {
+        "name": "Luxury Limousine",
+        "description": "Limousine transport from Airport",
+        "image": {
+            "url": "car.png",
+            "alt": "limousine-icon"
+        },
+        "price": 500,
+        "slug": "Limousine"
+    },
+    {
+        "name": "Gourmet Meal",
+        "description": "A five-course gourmet meal prepared by a top chef.",
+        "image": {
+            "url": "meal.png",
+            "alt": "meal-icon" 
+        },
+        "price": 200,
+        "slug": "Meal"
+    }
+]
