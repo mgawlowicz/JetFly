@@ -74,7 +74,7 @@ export default function Fleet(){
              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 <Link href={`/fleet/gulfstream-g550`} className='relative'>
                     <div className='w-full h-full'>
-                        <Image src={'/Jets/gulfstream-g550/g550.webp'} width={900} height={600} alt='gulstream-g550' className='brightness-75 object-cover' />
+                        <Image src={'/Jets/gulfstream-g550/g-550.webp'} width={900} height={600} alt='gulstream-g550' className='brightness-75 object-cover' />
                     </div>
                     <div className='w-full h-full absolute top-0 left-0 p-8 xl:p-12 flex flex-col justify-between'>
                         <h3 className='lg:text-xl font-semibold'>Gulfstream</h3>
@@ -93,7 +93,7 @@ export default function Fleet(){
                 </Link>
                 <Link href={`/fleet/gulfstream-g600`} className='relative'>
                     <div className='w-full h-full'>
-                        <Image src={'/Jets/gulfstream-g600/g600.webp'} width={900} height={600} alt='gulstream-g550' className='brightness-75 object-cover' />
+                        <Image src={'/Jets/gulfstream-g600/g-600.webp'} width={900} height={600} alt='gulstream-g550' className='brightness-75 object-cover' />
                     </div>
                     <div className='w-full h-full absolute top-0 left-0 p-8 xl:p-12 flex flex-col justify-between'>
                         <h3 className='lg:text-xl font-semibold'>Gulfstream</h3>
