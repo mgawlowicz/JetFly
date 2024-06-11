@@ -10,15 +10,12 @@ export default function Footer(){
                     <Image src='/logo.png' width={24} height={24} alt="JetFly-logo"></Image>
                     <h1>JetFly</h1>
                 </div>
-                <div className="flex gap-2">
-                    
-                </div>
             </div>
             <div className="flex w-full justify-between lg:gap-12 lg:justify-center font-semibold">
-                <Link href="#" className="hover:text-gray-400">Charter</Link>
-                <Link href="#"className="hover:text-gray-400">Our Fleet</Link>
-                <Link href="#" className="hover:text-gray-400">About us</Link>
-                <Link href="#" className="hover:text-gray-400">Contact</Link>
+                <Link href="/charter" className="hover:text-gray-400">Charter</Link>
+                <Link href="/fleet"className="hover:text-gray-400">Our Fleet</Link>
+                <Link href="/about" className="hover:text-gray-400">About us</Link>
+                <Link href="/contact" className="hover:text-gray-400">Contact</Link>
             </div>
         </footer>
     )
