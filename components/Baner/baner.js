@@ -59,7 +59,7 @@ export default function Baner(){
                     alt="baner-image" 
                 />
             </div>
-            <motion.div className="absolute h-screen flex flex-col justify-center p-4 lg:p-16 lg:w-1/2 gap-10 lg:gap-20" variants={container} initial="hidden" animate="show">
+            <motion.div className="absolute h-screen flex flex-col justify-center p-4 lg:p-16 xl:w-1/2 gap-10 lg:gap-20" variants={container} initial="hidden" animate="show">
                 <div className="flex flex-col gap-8">
                     <motion.h1 className="text-5xl lg:text-8xl font-bold" variants={mainItem}>A new better way of private flying</motion.h1>
                     <motion.p className="lg:text-lg font-medium" variants={item}>Renting a private jet has never been so easy</motion.p>
