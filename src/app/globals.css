@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  min-height: 100vh;
+}
+
+
+:root {
+  --fs-h1-mobile: 3rem;
+  --fs-h1-desktop: 5.625rem;
+}
+
+@layer base {
+  body {
+    @apply bg-premium-dark text-premium-accent antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply tracking-tighter font-extralight;
+  }
+}
+
+@layer components {
+
+  
+  .section-standard {
+    @apply w-full py-section-py-sm lg:py-section-py-lg bg-premium-dark;
+  }
+
+  .container-standard {
+    @apply mx-auto w-full max-w-[1920px] px-6 lg:px-16;
+  }
+
+  
+  .h2-standard {
+    @apply text-h2 lg:text-h2-lg uppercase font-extralight tracking-tighter leading-[0.9] text-neutral-400;
+  }
+
+  .subtitle-standard {
+    @apply text-subtitle uppercase font-extralight tracking-[0.6em] text-neutral-400 mb-4 block;
+  }
+
+  .description-standard {
+    @apply text-paragraph lg:text-paragraph-lg font-extralight leading-relaxed text-neutral-300;
+  }
+}
