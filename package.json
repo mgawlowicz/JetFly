@@ -17,11 +17,13 @@
     "clsx": "^2.1.1",
     "framer-motion": "^11.0.8",
     "hamburger-react": "^2.5.0",
+    "kafkajs": "^2.2.4",
     "next": "^15.0.0",
     "next-auth": "^5.0.0-beta.30",
     "react": "^18",
     "react-datepicker": "^9.1.0",
     "react-dom": "^18",
+    "stripe": "^22.1.1",
     "tailwind-merge": "^3.5.0"
   },
   "devDependencies": {
