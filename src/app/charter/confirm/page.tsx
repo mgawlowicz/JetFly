@@ -1,6 +1,5 @@
 "use client"
 import Image from "next/image"
-import Link from "next/link";
 import { useState, useEffect, use } from "react"
 import { motion, Variants } from "framer-motion"
 
@@ -81,6 +80,7 @@ export default function Confirm({searchParams} : {searchParams: Promise<{departu
     const [surname, setSurname] = useState('');
     const [email, setEmail] = useState('');
     const [tel, setTel] = useState('');
+    const [isRedirecting, setIsRedirecting] = useState(false);
 
     const [plane, setPlane] = useState<Plane[]>([]);
 
@@ -125,6 +125,53 @@ export default function Confirm({searchParams} : {searchParams: Promise<{departu
             ...prevState,
             [location]: !prevState[location]
         }));
+    };
+
+    const handleConfirmBooking = async () => {
+        if (!isFormValid) return;
+
+        setIsRedirecting(true);
+
+        const bookingPayload = {
+            firstName: name,
+            lastName: surname,
+            email: email,
+            phone: tel,
+            departure: resolvedSearchParams.departure,
+            arrival: resolvedSearchParams.arrival,
+            distance: Math.ceil(Number(resolvedSearchParams.distance)),
+            datetime: resolvedSearchParams.datetime,
+            jetSlug: resolvedSearchParams.jetSlug,
+            passengers: Number(resolvedSearchParams.passengers),
+            price: initialPrice,
+            sustainabilityTax: greenTax,
+            vat: vat,
+            bespokeServices: {
+                wine: openState['Wine'],
+                limousine: openState['Limousine'],
+                meal: openState['Meal']
+            },
+            totalPrice: totalPrice
+        };
+
+        try {
+            const response = await fetch('/api/booking', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(bookingPayload)
+            });
+
+            const result = await response.json();
+            if (result.success && result.stripeSessionUrl) {
+                window.location.href = result.stripeSessionUrl;
+            } else {
+                alert("Booking error. Please check your data.");
+                setIsRedirecting(false);
+            }
+        } catch (error) {
+            console.error("Connection failed:", error);
+            setIsRedirecting(false);
+        }
     };
 
     return (
@@ -339,16 +386,21 @@ export default function Confirm({searchParams} : {searchParams: Promise<{departu
                                 </div>
                             </div>
 
-                            <Link 
-                                href="./confirmed" 
+                            <button
+                                onClick={handleConfirmBooking}
+                                disabled={!isFormValid || isRedirecting}
                                 className={`group relative block w-full text-center py-6 border transition-all duration-700 active:scale-[0.98] ${
-                                    isFormValid 
+                                    isRedirecting
+                                    ? "bg-white/50 text-black/50 border-white/50 cursor-wait"
+                                    : isFormValid 
                                     ? "bg-white text-black border-white hover:bg-transparent hover:text-white" 
                                     : "bg-white/[0.02] text-white/10 border-white/5 cursor-not-allowed pointer-events-none"
                                 }`}
                             >
-                                <span className="relative z-10 text-[10px] uppercase tracking-[0.6em] font-bold">Confirm Booking</span>
-                            </Link>
+                                <span className="relative z-10 text-[10px] uppercase tracking-[0.6em] font-bold">
+                                    {isRedirecting ? "Redirecting to Stripe..." : "Confirm Booking"}
+                                </span>
+                            </button>
                             
                             {!isFormValid && (
                                 <p className="text-[8px] text-center uppercase tracking-[0.4em] text-white/10">Required fields remain incomplete</p>
